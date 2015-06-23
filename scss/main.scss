@@ -49,14 +49,49 @@ section {
 }
 
 header {
+  padding: 60px 30px;
+
+  @include clearfix;
+
   .site-logo {
     img {
-      width: 175px;
+      @include img-flex;
     }
   }
 
   .site-title {
-    font-size: 64px;
+    &:link,
+    &:active,
+    &:visited {
+      color: $color_black;
+      font-size: 64px;
+      text-decoration: none;
+    }
+  }
+
+  nav {
+    li {
+      list-style: none;
+      float: left;
+      width: 25%;
+    }
+  }
+
+  .site-brand {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .site-logo {
+        width: 20%;
+      }
+
+      .site-title {
+        width: 80%;
+        padding-left: 20px;
+      }
+    }
   }
 }
 
@@ -88,11 +123,6 @@ header {
       }
     }
   }
-}
-
-.item-50 {
-  float: left;
-  width: 50%;
 }
 
 .slick-prev {
