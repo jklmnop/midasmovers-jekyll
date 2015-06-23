@@ -1,15 +1,19 @@
 @import 'imports/_mixins.scss';
-@import 'imports/_reset.scss';
+@import 'imports/_normalize.scss';
 @import 'imports/_vars.scss';
 
 body {
-  background-color: $color_midasgold;
+
   @include font-trebuchet();
 
-  background-image: url('/img/logo.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background: {
+    color: $color_midasgold;
+    image: url('/img/logo.png');
+    repeat: no-repeat;
+    position: center center;
+    attachment: fixed;
+  }
+
 }
 
 .wrapper {
@@ -36,4 +40,30 @@ body {
 footer {
   text-align: center;
   background-color: $color_grey;
+}
+
+.service {
+  display: flex;
+  padding: 60px 0;
+
+  .service-body {
+    width: 50%;
+  }
+
+  .service-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  &.service-even  {
+    .service-image {
+      order: 0;
+    }
+    .service-body {
+      order: 1;
+    }
+  }
+
 }
