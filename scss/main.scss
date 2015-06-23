@@ -42,28 +42,62 @@ footer {
   background-color: $color_grey;
 }
 
+section {
+  padding: 60px 30px;
+  @include clearfix;
+
+}
+
+header {
+  .site-logo {
+    img {
+      width: 175px;
+    }
+  }
+
+  .site-title {
+    font-size: 64px;
+  }
+}
+
 .service {
-  display: flex;
-  padding: 60px 0;
-
-  .service-body {
-    width: 50%;
-  }
-
-  .service-image {
+  @include tablet {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-  }
 
-  &.service-even  {
-    .service-image {
-      order: 0;
-    }
     .service-body {
-      order: 1;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-content: flex-start;
+      flex-direction: column;
+    }
+
+    .service-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+
+    &.service-even  {
+      .service-image {
+        order: 0;
+      }
+      .service-body {
+        order: 1;
+      }
     }
   }
+}
 
+.item-50 {
+  float: left;
+  width: 50%;
+}
+
+.slick-prev {
+  left: 0;
+}
+.slick-next {
+  right: 0;
 }
