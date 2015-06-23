@@ -1,7 +1,7 @@
 {% if page.slider %}
 <div class="single-item">
     {% for slides in page.slider %}
-      <img src="{{ slides.image }}">
+      <img src="{{ site.baseurl }}{{ slides.image }}">
     {% endfor %}
 </div>
 {% endif %}
