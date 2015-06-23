@@ -1,0 +1,47 @@
+$bigphone-width: 400px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$bigscreen-width: 1280px;
+
+
+@media (max-width: #{$tablet-width}) {
+  .hide-mobile {display:none;}
+}
+@media (min-width: #{$tablet-width}) {
+  .show-mobile {display:none;}
+}
+
+
+
+@mixin bigphone {
+  @media (min-width: #{$bigphone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin bigscreen {
+  @media (min-width: #{$bigscreen-width}) {
+    @content;
+  }
+}
+
+@mixin img-flex {
+  width: 100%;
+  height: auto;
+}
+
+@mixin font-trebuchet {
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+}

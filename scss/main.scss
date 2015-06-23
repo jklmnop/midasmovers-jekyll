@@ -1,14 +1,39 @@
+@import 'imports/_mixins.scss';
+@import 'imports/_reset.scss';
+@import 'imports/_vars.scss';
+
 body {
-  background-color: #ffc600;
+  background-color: $color_midasgold;
+  @include font-trebuchet();
+
+  background-image: url('/img/logo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
-main {
-  background-color: #fdfdfd;
-  margin-left: auto;
-  margin-right: auto;
-  //width: 1200px;
+.wrapper {
+  margin: 0 auto;
+  background-color: rgba($color_white, .7);
+
+  @include bigphone {
+    width: $bigphone-width;
+  }
+
+  @include tablet {
+    width: $tablet-width;
+  }
+
+  @include desktop {
+    width: $desktop-width;
+  }
+
+  @include bigscreen {
+    width: $bigscreen-width;
+  }
 }
 
-/*section {
-  height: 100vh;
-}*/
+footer {
+  text-align: center;
+  background-color: $color_grey;
+}

@@ -1,3 +1,7 @@
-<section>
-<img src="http://midasmovers.nfshost.com/sites/default/files/styles/slider/public/banner/9d2c196eeb0cd5bdd0d41dda33c5fa21.jpg" width="100%" />
-</section>
+{% if page.slider %}
+<div class="single-item">
+    {% for slides in page.slider %}
+      <img src="{{ slides.image }}">
+    {% endfor %}
+</div>
+{% endif %}

@@ -1,1 +1,3 @@
-console.log('hi');
+$(function(){
+  $('.single-item').slick();
+});
