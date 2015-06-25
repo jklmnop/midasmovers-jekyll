@@ -69,15 +69,49 @@ header {
   }
 
   nav {
-    li {
-      list-style: none;
-      float: left;
-      width: 25%;
+    @include tablet {
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      li {
+        list-style: none;
+        text-align: center;
+        width: 25%;
+        background-color: $color_midasgold;
+        border-left: 1px solid darken($color_midasgold, 10);
+        border-right: 1px solid lighten($color_midasgold, 10);
+
+        &:first-child {
+          border-left: none;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      a {
+        padding: 1.5em;
+        display: block;
+        color: $color_black;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:focus,
+        &:hover {
+          color: $color_white;
+          background-color: darken($color_midasgold, 1);
+        }
+      }
     }
   }
 
   .site-brand {
     @include tablet {
+      margin-bottom: 1em;
       display: flex;
       justify-content: center;
       align-items: center;
