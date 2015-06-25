@@ -5,13 +5,14 @@
 
   <body style="background-image:url('{{site.logo}}');">
 
-    <div class="wrapper">
-      {% include header.html %}
+    {% include header.html %}
 
-      {{ content }}
+    {{ content }}
 
-      {% include footer.html %}
-    </div>
+    {% include footer.html %}
+
+    {% include footerscripts.html %}
+
 
   </body>
 

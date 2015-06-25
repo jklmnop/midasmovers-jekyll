@@ -17,7 +17,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  background-color: rgba($color_white, .7);
+  overflow: hidden;
 
   @include bigphone {
     width: $bigphone-width;
@@ -41,14 +41,9 @@ footer {
   background-color: $color_grey;
 }
 
-section {
-  padding: 60px 30px;
-  @include clearfix;
-
-}
-
 header {
-  padding: 60px 30px;
+  background-color: $color_white;
+  padding: 60px 0;
 
   @include clearfix;
 
@@ -65,6 +60,10 @@ header {
       color: $color_black;
       font-size: 64px;
       text-decoration: none;
+    }
+
+    small {
+      font-size: .5em;
     }
   }
 
@@ -128,39 +127,65 @@ header {
   }
 }
 
-.service {
-  @include tablet {
-    display: flex;
+#services {
+  background-color: rgba($color_white, .9);
+  min-height: 100vh;
 
-    .service-body {
-      width: 50%;
+  .service {
+    @include tablet {
       display: flex;
-      justify-content: center;
-      align-content: flex-start;
-      flex-direction: column;
-    }
+      margin-bottom: 5em;
 
-    .service-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-    }
-
-    &.service-even  {
-      .service-image {
-        order: 0;
-      }
       .service-body {
-        order: 1;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-direction: column;
+      }
+
+      .service-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+      }
+
+      &.service-even  {
+        .service-image {
+          order: 0;
+        }
+        .service-body {
+          order: 1;
+        }
       }
     }
   }
 }
 
-.slick-prev {
-  left: 0;
+#estimate {
+  background-color: rgba($color_midasred, .9);
+  color: $color_white;
+  min-height: 50vh;
 }
-.slick-next {
-  right: 0;
+
+#testimonials {
+  min-height: 100vh;
+  background-color: rgba($color_midasgold, .9);
+}
+
+#about {
+  background-color: rgba($color_white, .9);
+  min-height: 100vh;
+}
+
+.slick-slider {
+  margin-bottom: 0;
+
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
 }
