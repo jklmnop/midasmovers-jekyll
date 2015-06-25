@@ -9,13 +9,16 @@ body {
 
   @include font-trebuchet();
 
-  background-size: cover;
-
   background: {
     color: $color_midasgold;
     repeat: no-repeat;
     position: center center;
     attachment: fixed;
+    size: auto;
+  }
+
+  @include tablet {
+    background-size: 600px;
   }
 
 }
