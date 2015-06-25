@@ -1,0 +1,48 @@
+blockquote{
+  display:block;
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+
+  /*Font*/
+  font-size: 1em;
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
+
+  border-left: 15px solid $color_midasred;
+  border-right: 2px solid $color_midasred;
+
+  &::before{
+    content: "\201C"; /*Unicode for Left Double Quote*/
+
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: $color_midasred;
+
+    /*Positioning*/
+    position: absolute;
+    left: 10px;
+    top:5px;
+  }
+
+  &::after{
+    /*Reset to make sure*/
+    content: "";
+  }
+
+  a{
+    text-decoration: none;
+    background: #eee;
+    cursor: pointer;
+    padding: 0 3px;
+    color: #c76c0c;
+  }
+
+  a:hover{
+   color: #666;
+  }
+}

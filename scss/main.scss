@@ -1,10 +1,15 @@
 @import 'imports/_mixins.scss';
+@import 'imports/_reset.scss';
 @import 'imports/_normalize.scss';
 @import 'imports/_vars.scss';
+@import 'imports/_type.scss';
+@import 'imports/_grid.scss';
 
 body {
 
   @include font-trebuchet();
+
+  background-size: cover;
 
   background: {
     color: $color_midasgold;
@@ -13,27 +18,6 @@ body {
     attachment: fixed;
   }
 
-}
-
-.wrapper {
-  margin: 0 auto;
-  overflow: hidden;
-
-  @include bigphone {
-    width: $bigphone-width;
-  }
-
-  @include tablet {
-    width: $tablet-width;
-  }
-
-  @include desktop {
-    width: $desktop-width;
-  }
-
-  @include bigscreen {
-    width: $bigscreen-width;
-  }
 }
 
 footer {
@@ -45,9 +29,9 @@ header {
   background-color: $color_white;
   padding: 60px 0;
 
-  @include clearfix;
-
   .site-logo {
+    width: 100%;
+
     img {
       @include img-flex;
     }
@@ -132,28 +116,33 @@ header {
   min-height: 100vh;
 
   .service {
+    display: block;
+    margin-bottom: 5em;
+
+    .service-image {
+      text-align: center;
+    }
+
     @include tablet {
-      display: flex;
-      margin-bottom: 5em;
+      @include grid;
 
       .service-body {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-content: flex-start;
-        flex-direction: column;
+        @include grid;
+        @include grid-col;
+        @include item(50%);
       }
 
       .service-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
+        @include grid;
+        @include grid-center;
+        @include item(50%);
+        transform: rotate(-3deg);
       }
 
       &.service-even  {
         .service-image {
           order: 0;
+          transform: rotate(3deg);
         }
         .service-body {
           order: 1;
@@ -167,6 +156,28 @@ header {
   background-color: rgba($color_midasred, .9);
   color: $color_white;
   min-height: 50vh;
+  height: 50vh;
+
+  .grid {
+    @include grid;
+    @include grid-center;
+  }
+
+  .item {
+    //@include item(50%);
+  }
+
+  h2 {
+    @include sr-only;
+  }
+
+  a {
+    border: 2px solid $color_white;
+    padding: 1em 2em;
+    color: $color_white;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
 
 #testimonials {
@@ -177,15 +188,10 @@ header {
 #about {
   background-color: rgba($color_white, .9);
   min-height: 100vh;
-}
 
-.slick-slider {
-  margin-bottom: 0;
-
-  .slick-prev {
-    left: 0;
-  }
-  .slick-next {
-    right: 0;
+  .map {
+    @include img-flex;
   }
 }
+
+@import 'imports/_fixes.scss';

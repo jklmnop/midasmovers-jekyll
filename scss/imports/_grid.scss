@@ -1,0 +1,43 @@
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+  height: 100%;
+
+  @include bigphone {
+    width: $bigphone-width;
+  }
+
+  @include tablet {
+    margin: 0 auto;
+    padding: 0;
+    width: $tablet-width;
+  }
+
+  @include desktop {
+    width: $desktop-width;
+  }
+
+  @include bigscreen {
+    width: $bigscreen-width;
+  }
+}
+
+@mixin grid {
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+}
+
+@mixin grid-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-col {
+  flex-direction: column;
+}
+
+@mixin item($width) {
+  width: $width;
+}
