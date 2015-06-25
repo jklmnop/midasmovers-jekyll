@@ -4,7 +4,7 @@ email: midasmovers@gmail.com
 description: Website for Midas Movers, LLC
 baseurl: "http://jklmnop.github.io/midasmovers-jekyll"
 url: "http://jklmnop.github.io/midasmovers-jekyll"
-logo: "http://jklmnop.github.io/midasmovers-jekyll/img/build/logo.png"
+logo: "http://jklmnop.github.io/midasmovers-jekyll/img/logo.png"
 twitter_username: midasmovers
 github_username:  jklmnop
 markdown: redcarpet

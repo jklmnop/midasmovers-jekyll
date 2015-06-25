@@ -64,13 +64,12 @@ module.exports = function(grunt) {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'img',
+          cwd: 'imgraw',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'img/build/'
+          dest: 'img/'
         }]
       }
     }
-
   });
 
   require("load-grunt-tasks")(grunt);
