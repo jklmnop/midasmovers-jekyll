@@ -58,6 +58,17 @@ module.exports = function(grunt) {
         files: ["scss/*.scss"],
         tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
       }
+    },
+
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'img',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'img/build/'
+        }]
+      }
     }
 
   });
@@ -65,6 +76,6 @@ module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
   grunt.registerTask("serve", ["shell:jekyllServe"]);
-  grunt.registerTask("default", ["sass", "autoprefixer", "uglify", "shell:jekyllBuild", "watch"]);
+  grunt.registerTask("default", ["sass", "autoprefixer", "uglify", "imagemin", "shell:jekyllBuild", "watch"]);
 
 };
