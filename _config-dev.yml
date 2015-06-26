@@ -7,4 +7,4 @@ url: ""
 logo: /img/logo.png
 twitter_username: midasmovers
 github_username:  jklmnop
-markdown: redcarpet
+markdown: kramdown

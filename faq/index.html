@@ -1,0 +1,13 @@
+---
+layout: page
+permalink: faq/
+---
+
+<section id="faq">
+  <div class="wrapper">
+{% capture md %}
+{% include content/faq.markdown %}
+{% endcapture %}
+{{ md | markdownify }}
+  </div>
+</section>
