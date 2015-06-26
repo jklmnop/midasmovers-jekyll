@@ -2,9 +2,12 @@
   <div class="wrapper">
     <div class="site-brand">
       <a class="site-logo" href="{{ site.baseurl }}/"><img src="{{ site.logo }}"></a>
-      <a class="site-title" href="{{ site.baseurl }}/">Midas Movers <small>LLC</small></a>
+      <a class="site-title hide-mobile" href="{{ site.baseurl }}/">Midas Movers <small>LLC</small></a>
     </div>
 
-    {% include nav.html %}
+    <div class="hide-mobile">
+      {% include nav.html %}
+    </div>
+
   </div>
 </header>

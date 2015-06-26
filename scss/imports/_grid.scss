@@ -38,6 +38,10 @@
   flex-direction: column;
 }
 
+@mixin grid-row {
+  flex-direction: row;
+}
+
 @mixin item($width) {
   width: $width;
 }

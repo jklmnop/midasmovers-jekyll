@@ -1,0 +1,3 @@
+$(function(){
+  $('.single-item').slick();
+});

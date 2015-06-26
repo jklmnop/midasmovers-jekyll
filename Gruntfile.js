@@ -7,10 +7,20 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
 
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['js/src/site.js'],
+        dest: 'js/dist/site.js'
+      }
+    },
+
     uglify: {
       global: {
         files: {
-          "js/site.min.js": ["js/site.js"]
+          "js/dist/site.min.js": ["js/dist/site.js"]
         }
       }
     },
@@ -51,11 +61,11 @@ module.exports = function(grunt) {
         tasks: ["shell:jekyllBuild"]
       },
       js: {
-        files: ["js/*.js"],
-        tasks: ["uglify", "shell:jekyllBuild"]
+        files: ["js/**/*.js"],
+        tasks: ["concat", "uglify", "shell:jekyllBuild"]
       },
       css: {
-        files: ["scss/*.scss"],
+        files: ["scss/**/*.scss"],
         tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
       }
     },
@@ -75,6 +85,7 @@ module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
   grunt.registerTask("serve", ["shell:jekyllServe"]);
-  grunt.registerTask("default", ["sass", "autoprefixer", "uglify", "imagemin", "shell:jekyllBuild", "watch"]);
+  grunt.registerTask("imgmin", ["imgmin"]);
+  grunt.registerTask("default", ["sass", "autoprefixer", "concat", "uglify", "shell:jekyllBuild", "watch"]);
 
 };
