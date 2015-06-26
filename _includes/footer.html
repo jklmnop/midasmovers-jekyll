@@ -1,11 +1,11 @@
 <footer>
     <div class="wrapper">
-    <p class="site-slogan">{{ site.slogan }}</p>
-    <p>Contact Us<br /><a href="tel:2674222820">267.422.2820</a></p>
+    <p class="site-slogan"><em>{{ site.slogan }}</em></p>
+    <p class="contact">Contact Us<br /><a href="tel:2674222820">267.422.2820</a></p>
     <div>
 
     {% include nav.html %}
 
-    <small>{{ site.title }} &copy; {{ site.time | date: '%Y' }} ALL RIGHTS RESERVED</small>
+    <small><strong>{{ site.title }}<strong> &copy; {{ site.time | date: '%Y' }} ALL RIGHTS RESERVED</small>
   </div>
 </footer>

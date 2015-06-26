@@ -181,6 +181,17 @@ header {
     filter: grayscale(75%);
     @include img-flex;
   }
+
+  @include tablet {
+    .grid {
+      @include grid;
+    }
+
+    .item {
+      padding: 0 1em;
+      @include item(33%);
+    }
+  }
 }
 
 footer {
@@ -204,12 +215,26 @@ footer {
     a {
       text-decoration: none;
       color: $color_midasgold;
-      font-size: 1.2em;
+      font-size: 2em;
+
+      @include tablet {
+        font-size: 1em;
+      }
     }
   }
 
   small {
     color: $color_white;
+  }
+
+  .contact {
+    color: $color_white;
+
+    a {
+      color: $color_white;
+      text-decoration: none;
+      font-size: 2em;
+    }
   }
 }
 
