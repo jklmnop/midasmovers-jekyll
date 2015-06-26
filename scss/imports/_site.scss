@@ -33,15 +33,19 @@ header {
   }
 
   .site-title {
-    color: $color_black;
-    text-decoration: none;
+    font-weight: normal;
 
-    @include tablet {
-      font-size: 64px;
-    }
+    a {
+      color: $color_black;
+      text-decoration: none;
 
-    small {
-      font-size: .5em;
+      @include tablet {
+        font-size: 64px;
+      }
+
+      small {
+        font-size: .5em;
+      }
     }
   }
 

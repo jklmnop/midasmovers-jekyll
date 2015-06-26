@@ -2,7 +2,12 @@
   <div class="wrapper">
     <div class="site-brand">
       <a class="site-logo" href="{{ site.baseurl }}/"><img src="{{ site.logo }}"></a>
-      <a class="site-title hide-mobile" href="{{ site.baseurl }}/">Midas Movers <small>LLC</small></a>
+
+      {% if page.url == "/index.html" %}
+      <h1 class="site-title hide-mobile"><a href="{{ site.baseurl }}/">Midas Movers <small>LLC</small></a></h1>
+      {% else %}
+      <p class="site-title hide-mobile"><a href="{{ site.baseurl }}/">Midas Movers <small>LLC</small></a></p>
+      {% endif %}
     </div>
 
     <div class="hide-mobile">
