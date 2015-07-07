@@ -1,18 +1,16 @@
 <header>
-  <div class="wrapper">
-    <div class="site-brand">
-      <a class="site-logo" href="{{ site.baseurl }}/"><img src="{{ site.logo }}"></a>
 
+  <div class="site-brand">
+    <a href="{{ site.baseurl }}/">
+      <div class="site-logo"><img src="{{site.logo}}" height="76px" /></div>
       {% if page.url == "/index.html" %}
-      <h1 class="site-title hide-mobile"><a href="{{ site.baseurl }}/">Midas Movers <small>LLC</small></a></h1>
+      <h1 class="site-title">Midas Movers <small>LLC</small></h1>
       {% else %}
-      <p class="site-title hide-mobile"><a href="{{ site.baseurl }}/">Midas Movers <small>LLC</small></a></p>
+      <p class="site-title">Midas Movers <small>LLC</small></p>
       {% endif %}
-    </div>
-
-    <div class="hide-mobile">
-      {% include nav.html %}
-    </div>
-
+    </a>
   </div>
+
+  {% include content/slider.html %}
+  {% include nav.html %}
 </header>
