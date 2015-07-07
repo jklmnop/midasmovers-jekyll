@@ -4,7 +4,7 @@ email: midasmovers@gmail.com
 description: Website for Midas Movers, LLC
 baseurl: ""
 url: ""
-logo: /img/logo.png
+logo: "/img/logo.png"
 twitter_username: midasmovers
 github_username:  jklmnop
 markdown: kramdown

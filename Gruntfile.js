@@ -85,7 +85,7 @@ module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
   grunt.registerTask("serve", ["shell:jekyllServe"]);
-  grunt.registerTask("imgmin", ["imgmin"]);
+  grunt.registerTask("img", ["imagemin"]);
   grunt.registerTask("default", ["sass", "autoprefixer", "concat", "uglify", "shell:jekyllBuild", "watch"]);
 
 };
