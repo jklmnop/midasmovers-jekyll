@@ -3,13 +3,15 @@
 
   {% include head.html %}
 
-  <body style="background-image:url('{{site.logo}}');">
+  <body>
 
     {% include header.html %}
 
     {{ content }}
 
     {% include footer.html %}
+
+    <div class="background" style="background-image:url('{{site.logo}}');"></div>
 
     {% include footerscripts.html %}
 

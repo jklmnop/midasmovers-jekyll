@@ -2,18 +2,26 @@ body {
 
   @include font-trebuchet();
 
-  background: {
-    color: $color_midasgold;
-    repeat: no-repeat;
-    position: center center;
-    attachment: fixed;
-    size: cover;
-  }
+  background-color: $color_midasgold;
 
   @include tablet {
     background-size: 600px;
   }
+}
 
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: {
+    color: $color_midasgold;
+    repeat: no-repeat;
+    position: center center;
+    size: 100%;
+  }
 }
 
 header {
