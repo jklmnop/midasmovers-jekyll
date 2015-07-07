@@ -3,8 +3,15 @@
   padding-right: 15px;
   overflow: hidden;
   height: 100%;
+  width: 100%;
 
-  @include bigphone {
+  @include tablet {
+    margin: 0 auto;
+    padding: 0;
+    width: $tablet-width;
+  }
+
+  /*@include bigphone {
     width: $bigphone-width;
   }
 
@@ -20,7 +27,7 @@
 
   @include bigscreen {
     width: $bigscreen-width;
-  }
+  }*/
 }
 
 @mixin grid {

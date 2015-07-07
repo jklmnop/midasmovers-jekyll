@@ -1,8 +1,12 @@
 {% if page.slider %}
 <div class="slider">
-  <div class="single-item">
+  <div class="default-item show-mobile" style="background-image: url('{{ site.baseurl }}{{ page.slider-default }}');">
+    <img src="{{ site.baseurl }}{{ page.slider-default }}" />
+  </div>
+
+  <div class="single-item hide-mobile">
       {% for slides in page.slider %}
-        <img src="{{ site.baseurl }}{{ slides.image }}">
+        <img src="{{ site.baseurl }}{{ slides.image }}" />
       {% endfor %}
   </div>
 </div>
