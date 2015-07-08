@@ -4,6 +4,13 @@ var midasmovers = window.midasmovers = {
   },
 
   set_events: function() {
+    this._sticky_menu();
+    this._toggle_mobile_menu();
+
+    return this;
+  },
+
+  _sticky_menu: function() {
     $(document).on('scroll', function(event){
       var height = (
             $('header').height() - $('header nav').height()
@@ -16,9 +23,13 @@ var midasmovers = window.midasmovers = {
       } else {
         $target.removeClass('sticky');
       }
-    }).trigger('scroll');
+    });
+  },
 
-    return this;
+  _toggle_mobile_menu: function() {
+    $('.nav-button').on('click', function(event){
+
+    });
   }
 };
 
