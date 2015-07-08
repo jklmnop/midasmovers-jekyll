@@ -75,7 +75,6 @@ header {
   }
 
   nav {
-    //@include tablet {
       ul {
         margin: 0;
         padding: 0;
@@ -126,7 +125,14 @@ header {
           background-color: darken($color_midasgold, 1);
         }
       }
-    //}
+
+      &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1776;
+      }
   }
 }
 
@@ -175,7 +181,7 @@ header {
   background-color: rgba($color_midasred, .9);
   color: $color_white;
   min-height: 50vh;
-  height: 50vh;
+  height: 100vh;
 
   .grid {
     @include grid;
